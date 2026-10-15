@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 1</title>
+	</head>
+	<body>
+		<h1>Задача 1</h1>
+		<p>Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+		<script>
+		const firstNum = parseFloat(prompt('Введіть перше дійсне число', 0));
+		const secondNum = parseFloat(prompt('Введіть друге дійсне число', 0));
+
+		const sum = firstNum + secondNum;
+		const multiplication = firstNum * secondNum;
+		const quotient = firstNum / secondNum;
+
+		document.write(`
+			<table border="1" cellspacing="0" cellpadding="6">
+				<tr>
+					<th >Математична операція</th>
+					<th>Результат</th>
+				</tr>
+				<tr>
+					<td>Сума</td>
+					<td>${sum.toFixed(2)}</td>
+				</tr>
+				<tr>
+					<td>Добуток</td>
+					<td>${multiplication.toFixed(2)}</td>
+				</tr>
+				<tr>
+					<td>Частка</td>
+					<td>${quotient.toFixed(2)}</td>
+				</tr>
+			</table>
+		`);
+	</script>
+	</body>
+</html>

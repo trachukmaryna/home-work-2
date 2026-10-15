@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 0</title>
+	</head>
+	<body>
+		<h1>Задача 0</h1>
+		<p>Обчислити значення виразів</p>
+		<script>
+			const a = parseInt(prompt('Введіть значення a', 0));
+			const b = parseInt(prompt('Введіть значенн b', 0));
+			const c = parseInt(prompt('Введіть значенн c', 0));
+
+			const S1 = a + 12 + b;
+			const S2 = Math.sqrt((a + b) / (2 * a));
+			const S3 = Math.cbrt((a + b) * c);
+			const S4 = Math.sin(a / -b);
+
+			document.write(`
+				S1 = ${S1} <br>
+				S2 = ${S2.toFixed(2)} <br>
+				S3 = ${S3.toFixed(2)} <br>
+				S4 = ${S4.toFixed(2)} <br>
+			`);
+	</script>
+	</body>
+</html>

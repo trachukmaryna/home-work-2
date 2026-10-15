@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 7</title>
+	</head>
+	<body>
+		<h1>Задача 7</h1>
+		<p>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
+		<script>
+			const monthMin = 1;
+			const monthMax = 12;
+
+			const dayMax = 6;
+			const dayMin = 0;
+
+			const randomMonth = monthMin + Math.floor(Math.random() * (monthMax - monthMin + 1));
+			const randomDay = dayMin + Math.floor(Math.random() * (dayMax - dayMin + 1));
+
+			const summRandom = randomMonth + randomDay;
+
+			document.writeln(`Рандомний місяць ${randomMonth}, рандомний день ${randomDay}, їх сума ${summRandom}`);
+		</script>
+	</body>
+</html>

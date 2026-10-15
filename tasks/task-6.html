@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Задача 6</title>
+	</head>
+	<body>
+		<h1>Задача 6</h1>
+		<p>Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+			Обчислити вартість кожного товару окремо та загальну вартість.
+			Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+		<script>
+			const costFirstProduct = parseFloat(prompt('Введіть вартість першого товару, грн', 0));
+			const amountFirstProduct = parseFloat(prompt('Введіть кількість першого товару, шт/грн', 0));
+
+			const costSecondProduct = parseFloat(prompt('Введіть вартість другого товару, грн', 0));
+			const amountSecondProduct = parseFloat(prompt('Введіть кількість другого товару, шт/грн', 0));
+
+			const costThirdProduct = parseFloat(prompt('Введіть вартість третього товару, грн', 0));
+			const amountThirdProduct = parseFloat(prompt('Введіть кількість третього товару, шт/грн', 0));
+
+			const totalFirstProduct = costFirstProduct * amountFirstProduct;
+			const totalSecondProduct = costSecondProduct * amountSecondProduct;
+			const totalThirdProduct = costThirdProduct * amountThirdProduct;
+			const totalSum = totalFirstProduct + totalSecondProduct + totalThirdProduct;
+
+			document.write(`
+				<table border="1" cellspacing="0" cellpadding="6">
+					<caption>Товарний Чек</caption>
+					<tr>
+						<th>Назва товару</th>
+						<th>Кількість, шт/кг</th>
+						<th>Ціна, грн</th>
+						<th>Вартість, грн</th>
+					</tr>
+					<tr>
+						<td>Товар 1</td>
+						<td>${amountFirstProduct}</td>
+						<td>${costFirstProduct}</td>
+						<td>${totalFirstProduct.toFixed(2)}</td>
+					</tr>
+					<tr>
+						<td>Товар 2</td>
+						<td>${amountSecondProduct}</td>
+						<td>${costSecondProduct}</td>
+						<td>${totalSecondProduct.toFixed(2)}</td>
+					</tr>
+					<tr>
+						<td>Товар 3</td>
+						<td>${amountThirdProduct}</td>
+						<td>${costThirdProduct}</td>
+						<td>${totalThirdProduct.toFixed(2)}</td>
+					</tr>
+					<tr>
+						<td colspan="3">Загальна вартість чеку, грн</td>
+						<td>${totalSum.toFixed(2)}</td>
+					</tr>
+				</table>
+			`)
+		</script>
+	</body>
+</html>
